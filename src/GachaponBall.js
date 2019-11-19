@@ -74,7 +74,7 @@ class GachaponBall extends React.Component{
         const speed = Math.random()*2;
 
         this.counter += speed * delta
-        const value = 20 -1 / 2 + Math.cos(this.counter)  / 2
+        const value =  1 / 2 - Math.cos(this.counter)  / 2
 
         this.setState({ value})
     }

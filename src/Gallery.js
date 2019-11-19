@@ -74,7 +74,7 @@ export default class Gallery extends React.Component{
         return(
             <div className="Gallery">
                 <Stage options={OPTIONS}>
-                    {toys.map((each,index)=>(<GachaponBall key={index} tint={depts[each.department].color} height={each.size/largest*100} />))}
+                    {toys.map((each,index)=>(<GachaponBall key={index} tint={depts[each.department].color} height={each.size/largest*100+5} />))}
                 </Stage>
                 {/*{toys.map(i=>(*/}
                 {/*    <Link key={i.objectID} to={{pathname:`/img/${i.objectID}`,state:{background:this.props.location}}}>*/}
