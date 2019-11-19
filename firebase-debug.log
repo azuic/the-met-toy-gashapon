@@ -1,0 +1,64 @@
+[debug] [2019-11-19T15:55:09.454Z] ----------------------------------------------------------------------
+[debug] [2019-11-19T15:55:09.456Z] Command:       /Users/zuic/.nvm/versions/node/v10.14.2/bin/node /Users/zuic/.nvm/versions/node/v10.14.2/bin/firebase deploy --only hosting:the-met-toy-gachapon
+[debug] [2019-11-19T15:55:09.456Z] CLI Version:   7.6.2
+[debug] [2019-11-19T15:55:09.456Z] Platform:      darwin
+[debug] [2019-11-19T15:55:09.456Z] Node Version:  v10.14.2
+[debug] [2019-11-19T15:55:09.457Z] Time:          Tue Nov 19 2019 10:55:09 GMT-0500 (Eastern Standard Time)
+[debug] [2019-11-19T15:55:09.457Z] ----------------------------------------------------------------------
+[debug] [2019-11-19T15:55:09.457Z] 
+[debug] [2019-11-19T15:55:09.464Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-19T15:55:09.464Z] > authorizing via signed-in user
+[debug] [2019-11-19T15:55:09.464Z] [iam] checking project zui-c-fb698 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-11-19T15:55:09.466Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/zui-c-fb698:testIamPermissions  
+
+[debug] [2019-11-19T15:55:09.760Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-19T15:55:09.762Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/zui-c-fb698  
+ 
+[debug] [2019-11-19T15:55:09.985Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'zui-c-fb698'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/zui-c-fb698/overview
+[debug] [2019-11-19T15:55:10.080Z] TypeError: Cannot read property 'deploys' of undefined
+    at /Users/zuic/.nvm/versions/node/v10.14.2/lib/node_modules/firebase-tools/lib/deploy/index.js:84:36
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-11-19T16:58:33.190Z] ----------------------------------------------------------------------
+[debug] [2019-11-19T16:58:33.192Z] Command:       /Users/zuic/.nvm/versions/node/v10.14.2/bin/node /Users/zuic/.nvm/versions/node/v10.14.2/bin/firebase deploy --only hosting:the-met-toy-gachapon
+[debug] [2019-11-19T16:58:33.193Z] CLI Version:   7.6.2
+[debug] [2019-11-19T16:58:33.193Z] Platform:      darwin
+[debug] [2019-11-19T16:58:33.193Z] Node Version:  v10.14.2
+[debug] [2019-11-19T16:58:33.194Z] Time:          Tue Nov 19 2019 11:58:33 GMT-0500 (Eastern Standard Time)
+[debug] [2019-11-19T16:58:33.194Z] ----------------------------------------------------------------------
+[debug] [2019-11-19T16:58:33.194Z] 
+[debug] [2019-11-19T16:58:33.202Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-19T16:58:33.202Z] > authorizing via signed-in user
+[debug] [2019-11-19T16:58:33.203Z] [iam] checking project zui-c-fb698 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-11-19T16:58:33.204Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-11-19T16:58:33.204Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-11-19T16:58:33.350Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-19T16:58:33.372Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/zui-c-fb698:testIamPermissions  
+
+[debug] [2019-11-19T16:58:33.587Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-19T16:58:33.590Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/zui-c-fb698  
+ 
+[debug] [2019-11-19T16:58:33.959Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'zui-c-fb698'...
+[info] 
+[info] i  deploying hosting
+[info] 
+[info] ✔  Deploy complete!
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/zui-c-fb698/overview
+[debug] [2019-11-19T16:58:34.026Z] TypeError: Cannot read property 'deploys' of undefined
+    at /Users/zuic/.nvm/versions/node/v10.14.2/lib/node_modules/firebase-tools/lib/deploy/index.js:84:36
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[error] 
+[error] Error: An unexpected error has occurred.
