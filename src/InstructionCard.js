@@ -1,13 +1,13 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useHistory,
-    useLocation,
-    useParams
-} from "react-router-dom";
+// import {
+//     BrowserRouter as Router,
+//     Switch,
+//     Route,
+//     Link,
+//     useHistory,
+//     useLocation,
+//     useParams
+// } from "react-router-dom";
 // import {useHistory, useParams} from "react-router";
 // import React from "react";
 import {toys} from './toys';
@@ -26,6 +26,9 @@ export default class InstructionCard extends React.Component{
         console.log(prevProps.showModal,'')
         if(prevProps.showModal !== this.props.showModal){
             this.setState({showInfo: !!this.props.showModal}) ;
+        }
+        if(prevProps.objectID !== this.props.objectID){
+            this.setState({objectInfo: toys.find(obj=>obj.objectID===this.props.objectID)})
         }
     }
 
