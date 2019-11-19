@@ -44,7 +44,7 @@ function Home() {
                 <td style={{width:'200px'}}><LottieGashapon /></td>
             </tr></tbody></table>
             <LottieGashapon />
-            <Link to="/gallery"><a className="btn btn-2 btn-3" href="#">GO</a></Link>
+            <Link to="/gallery"><div className="btn btn-2 btn-3">GO</div></Link>
         </div>
     )
 }

@@ -41,6 +41,9 @@
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
+  position: absolute;
+  top: 50%;
+  left: 20%;
 }
 
 .btn:after {
@@ -133,7 +136,7 @@
   fill: none;
   stroke-width: 0.75px;
   stroke-linejoin: round;
-  stroke-dasharray: 35px 100;
+  stroke-dasharray: 35px;
   stroke-dashoffset: 0;
   -webkit-animation: stroke 8s infinite linear;
   animation: stroke 6s infinite linear;

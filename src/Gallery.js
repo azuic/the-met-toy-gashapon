@@ -2,16 +2,16 @@ import React from 'react';
 import {toys} from './toys.js';
 import {depts} from "./depts.js";
 import GachaponBall from "./GachaponBall";
-// import Gundam from "./Gundam";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    useHistory,
-    useLocation,
-    useParams
-} from "react-router-dom";
+// // import Gundam from "./Gundam";
+// import {
+//     BrowserRouter as Router,
+//     Switch,
+//     Route,
+//     Link,
+//     useHistory,
+//     useLocation,
+//     useParams
+// } from "react-router-dom";
 
 import { render, Sprite, Stage } from "react-pixi-fiber";
 import * as PIXI from "pixi.js";
@@ -74,7 +74,7 @@ export default class Gallery extends React.Component{
         return(
             <div className="Gallery">
                 <Stage options={OPTIONS}>
-                    {toys.map((each,index)=>(<GachaponBall key={index} tint={depts[each.department].color} height={each.size/largest*100+5} />))}
+                    {toys.map((each,index)=><GachaponBall key={index} x={Math.floor(Math.random()*width)} y={Math.floor(Math.random()*height)} tint={depts[each.department].color} height={each.size/largest+10} />)}
                 </Stage>
                 {/*{toys.map(i=>(*/}
                 {/*    <Link key={i.objectID} to={{pathname:`/img/${i.objectID}`,state:{background:this.props.location}}}>*/}
