@@ -1,16 +1,16 @@
 import React from 'react';
-// import {
-//     BrowserRouter as Router,
-//     Switch,
-//     Route,
-//     Link,
-//     useHistory,
-//     useLocation,
-//     useParams
-// } from "react-router-dom";
-// import {useHistory, useParams} from "react-router";
-// import React from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useHistory,
+    useLocation,
+    useParams
+} from "react-router-dom";
+import './InstructionCard.css';
 import {toys} from './toys';
+import {depts} from "./depts";
 
 export default class InstructionCard extends React.Component{
     constructor(props){
@@ -35,8 +35,8 @@ export default class InstructionCard extends React.Component{
     // if (!image) return null;
 
     back = (e) => {
-        e.stopPropagation();
-        this.props.history.goBack();
+        // e.stopPropagation();
+        this.setState(prevState=>({showInfo: !prevState.showInfo}));
     };
     render(){
         const visible = {display: this.state.showInfo? 'block': 'none'};
@@ -62,21 +62,23 @@ export default class InstructionCard extends React.Component{
                     top: 25,
                     left: "10%",
                     right: "10%",
-                    padding: 15,
+                    padding: 0,
                     width: '400px',
-                    height: '540px'
+                    height: '540px',
+                    borderRadius: '28px'
                 }}
             >
                 <table style={{width:'400px', zIndex:'3', top:0}} >
                     <tbody>
-                    <tr style={{height:'280px'}}>
+                    <tr style={{height:'300px'}}>
                         <td className="ProfileImage"
                             style={{backgroundImage:`url(https://storage.googleapis.com/ceramics/toys/resize_crops/${this.state.objectInfo.objectID}.png)`,
                                     backgroundRepeat: 'no-repeat',
-                                    backgroundPosition: 'center'}} />
+                                    backgroundPosition: 'center',
+                                    borderRadius:'28px'}} />
                     </tr>
                     <tr  style={{height:'220px'}}>
-                        <td style={{paddingLeft: '50px',paddingRight:'50px'}}>
+                        <td style={{paddingLeft: '50px',paddingRight:'50px',borderRadius:'28px',backgroundColor:`#${depts[this.state.objectInfo.department].color.toString(16)}60`}}>
                             <h3>
                                 {this.state.objectInfo.title}
                             </h3>
@@ -88,8 +90,11 @@ export default class InstructionCard extends React.Component{
                 </table>
                 <div style={{position:'absolute',top:0, width: '400px', height: '540px',zIndex:'4',backgroundRepeat:'no-repeat',backgroundSize: 'contain', backgroundImage:'url("https://storage.cloud.google.com/ceramics/gudamcard.png")'}}/>
 
-                <button type="button" style={{position:'absolute', top:17, right:50, zIndex:'5', width:'20px',height:'20px', borderStyle: 'solid', borderColor:'F7D700',borderRadius:'5px', backgroundColor:'#F7D700', color: '#fff', outline: 'none', justify:'center'}} onClick={this.back}>X</button>
+                <button type="button" style={{
+                    boxShadow: 'none',
+                    outlineStyle: 'none',position:'absolute', top:10, right:50, zIndex:'5', width:'60px',height:'20px', borderStyle: 'solid', borderColor:'F7D700',borderRadius:'5px', backgroundColor:'#F7D700', color: '#fff', outline: 'none', justify:'center'}} onClick={this.back}>close</button>
             </div>
+
         </div>
     );}
 }

@@ -2,19 +2,9 @@ import React from 'react';
 import {toys} from './toys.js';
 import {depts} from "./depts.js";
 import GachaponBall from "./GachaponBall";
-// // import Gundam from "./Gundam";
-// import {
-//     BrowserRouter as Router,
-//     Switch,
-//     Route,
-//     Link,
-//     useHistory,
-//     useLocation,
-//     useParams
-// } from "react-router-dom";
 
 import { Stage } from "react-pixi-fiber";
-// import * as PIXI from "pixi.js";
+
 
 import {gsap,Draggable,InertiaPlugin,VelocityTracker} from "gsap/all";
 import InstructionCard from "./InstructionCard";
@@ -54,16 +44,16 @@ export default class Gallery extends React.Component{
             throwProps:true,
             inertia: true,
             onDragStart:()=>
-                this.setState({doShuffle:true,objectSelected:Math.floor(Math.random()*toys.length)}),
+                this.setState({doShuffle:true}),
             onDrag: ()=>
                 this.setState({angle:(this.rotation +360*100000)%360}),
             onThrowUpdate: ()=>
                 this.setState({angle:(this.rotation +360*100000)%360}),
             onThrowComplete: ()=>
-                {this.setState({
+                this.setState({
                     angle:(this.rotation +360*100000)%360,
-                    showModal:true});
-                console.log(toys[this.state.objectSelected].objectID)}
+                    showModal:true,
+                    objectSelected:Math.floor(Math.random()*toys.length)})
         })
     }
 
@@ -82,7 +72,7 @@ export default class Gallery extends React.Component{
                 {/*))}*/}
                 {/*    <Link key={toys[this.state.objectSelected].objectID} to={{pathname:`/img/${toys[this.state.objectSelected].objectID}`,state:{background:this.props.location}}} showModal={this.props.showModal}/>*/}
                 <InstructionCard showModal={this.state.showModal} objectID={toys[this.state.objectSelected].objectID}/>
-                <div className="draggable" ref={div => (this.dragTarget = div)} style={{position:'absolute',bottom:'10%', left: '50%',width:'320px',height:'320px', backgroundRepeat:'no-repeat',backgroundSize: 'contain', backgroundImage: 'url("https://storage.googleapis.com/ceramics/spinner.png")'}} />
+                <div className="draggable" ref={div => (this.dragTarget = div)} style={{position:'absolute',bottom:'10%', right: '10%',width:'320px',height:'320px', backgroundRepeat:'no-repeat',backgroundSize: 'contain', backgroundImage: 'url("https://storage.googleapis.com/ceramics/spinner.png")'}} />
 
                 {/*<Gundam objectID={this.state.objectID} onClick={this.hideGundam}/>*/}
             </div>
