@@ -13,8 +13,8 @@ import GachaponBall from "./GachaponBall";
 //     useParams
 // } from "react-router-dom";
 
-import { render, Sprite, Stage } from "react-pixi-fiber";
-import * as PIXI from "pixi.js";
+import { Stage } from "react-pixi-fiber";
+// import * as PIXI from "pixi.js";
 
 import {gsap,Draggable,InertiaPlugin,VelocityTracker} from "gsap/all";
 import InstructionCard from "./InstructionCard";
@@ -23,7 +23,7 @@ gsap.registerPlugin(Draggable,InertiaPlugin,VelocityTracker);
 
 const sizes = toys.map(i=>i.size);
 const largest=Math.max(...sizes);
-const smallest = Math.min(...sizes);
+// const smallest = Math.min(...sizes);
 
 
 const height = window.innerHeight;
@@ -54,7 +54,7 @@ export default class Gallery extends React.Component{
             throwProps:true,
             inertia: true,
             onDragStart:()=>
-                this.setState({doShuffle:true}),
+                this.setState({doShuffle:true,objectSelected:Math.floor(Math.random()*toys.length)}),
             onDrag: ()=>
                 this.setState({angle:(this.rotation +360*100000)%360}),
             onThrowUpdate: ()=>
@@ -67,8 +67,8 @@ export default class Gallery extends React.Component{
         })
     }
 
-    showGundam=()=>this.setState({showModal:!this.state.showModal});
-    hideGundam=()=>this.setState({showModal:false});
+    // showGundam=()=>this.setState({showModal:!this.state.showModal});
+    // hideGundam=()=>this.setState({showModal:false});
 
     render() {
         return(
